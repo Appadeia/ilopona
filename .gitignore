@@ -1,0 +1,7 @@
+build/*
+debian/build/*
+debian/com.github.Appadeia.ilopona.debhelper.log
+debian/com.github.Appadeia.ilopona.substvars
+debian/com.github.Appadeia.ilopona/
+debian/debhelper-build-stamp
+debian/files

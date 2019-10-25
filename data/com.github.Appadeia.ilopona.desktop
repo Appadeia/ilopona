@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ilo Pona
+Comment=The app for the language of good
+Icon=com.github.Appadeia.ilopona
+Exec=com.github.Appadeia.ilopona
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;
+Keywords=app;vala;
