@@ -27,8 +27,34 @@
 * For more information, please refer to <http://unlicense.org>
 */
 
-@define-color colorPrimary #FBFF77;
-@define-color textColorPrimary #1A1A1A;
+@define-color colorPrimary rgb(151, 163, 255);
+@define-color textColorPrimary #FFFFFF;
 /* @define-color textColorPrimaryShadow {{ headerbar-text-shadow-color }}; */
 @define-color colorAccent #1617A1;
 
+.titlebar {
+    color: white;
+    border: 0;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+.titlebar .title {
+    color: white;
+    text-shadow: 2px 2px 9px #000000;
+}
+list row {
+	font-size: 20pt;
+	padding: 20px;
+}
+hdyleaflet stack {
+    box-shadow: none;
+}
+hdyleaflet.folded stack {
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+}
+.h1 {
+    font-size: 32px;
+}
+.h2 {
+    font-size: 24px;
+    font-weight: 300;
+}

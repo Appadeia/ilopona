@@ -29,6 +29,7 @@
 
 using IloPona.Widgets;
 using IloPona.Views;
+using Hdy;
 
 namespace IloPona.Controllers {
 
@@ -41,7 +42,7 @@ namespace IloPona.Controllers {
 
         private Gtk.Application            application;
         private AppView                    app_view;
-        private Gtk.HeaderBar              headerbar;
+        private IloPona.Widgets.HeaderBar  headerbar;
         private Gtk.ApplicationWindow      window { get; private set; default = null; }
 
         /**
@@ -50,8 +51,11 @@ namespace IloPona.Controllers {
         public AppController (Gtk.Application application) {
             this.application = application;
             this.window = new Window (this.application);
-            this.headerbar = new HeaderBar ();
+            this.headerbar = new IloPona.Widgets.HeaderBar ();
             this.app_view = new AppView ();
+            this.headerbar.search_changed.connect(() => {
+                this.app_view.filter(this.headerbar.search.get_text());
+            });
 
             this.window.add (this.app_view);
             this.window.set_default_size (800, 640);

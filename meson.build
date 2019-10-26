@@ -24,7 +24,8 @@ configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
 c_args = [
-  '-include', 'config.h'
+  '-include', 'config.h',
+  '-DHANDY_USE_UNSTABLE_API'
 ]
 
 sources = files()
@@ -38,7 +39,8 @@ dependencies = [
 	dependency('gobject-2.0'),
     dependency('glib-2.0'),
     dependency('granite'),
-    dependency('gtk+-3.0')
+    dependency('gtk+-3.0'),
+    dependency('libhandy-0.0')
 ]
 
 e = executable('com.github.Appadeia.ilopona',

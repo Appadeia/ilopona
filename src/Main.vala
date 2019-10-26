@@ -69,10 +69,12 @@ public class Main {
                 return false;
             });
             
+            Hdy.init (ref args);
             Gtk.main ();
         }
         else {
             var app = new IloPona.Application ();
+            Hdy.init (ref args);    
             app.run (args);
         }
 

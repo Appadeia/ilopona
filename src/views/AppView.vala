@@ -30,8 +30,51 @@
 using IloPona.Configs;
 using IloPona.Widgets;
 
+using Hdy;
+
 namespace IloPona.Views {
 
+
+    public class Entry {
+        public string word;
+        public string n;
+        public string mod;
+        public string sep;
+        public string vt;
+        public string vi;
+        public string interj;
+        public string prep;
+        public string conj;
+        public string kama;
+        public string cont;
+        public string oth;
+
+        public Entry(string  word, 
+                     string? n = null,
+                     string? mod = null,
+                     string? sep = null,
+                     string? vt = null,
+                     string? vi = null,
+                     string? interj = null,
+                     string? prep = null,
+                     string? conj = null,
+                     string? kama = null,
+                     string? cont = null,
+                     string? oth = null) {
+            this.word = word;
+            this.n = n;
+            this.mod = mod;
+            this.sep = sep;
+            this.vt = vt;
+            this.vi = vi;
+            this.interj = interj;
+            this.prep = prep;
+            this.conj = conj;
+            this.kama = kama;
+            this.cont = cont;
+            this.oth = oth;
+        }
+    }
     /**
      * The {@code AppView} class.
      *
@@ -39,35 +82,193 @@ namespace IloPona.Views {
      */
     public class AppView : Gtk.Box {
 
+        public Gtk.Stack stack;
+        public Entry[] dictionary;
+
+        public void filter(string query) {
+            for(int i = 0; i < this.stack.get_children().length(); i++) {
+                if(this.dictionary[i].word.contains(query)) {
+                    this.stack.get_children().nth_data(i).show();
+                } else {
+                    this.stack.get_children().nth_data(i).hide();
+                }
+            }
+        }
         /**
          * Constructs a new {@code AppView} object.
          */
         public AppView () {
-            var welcome_view = new Granite.Widgets.Welcome (_("Welcome"), _("Open up your editor to get started!"));
-            welcome_view.append ("text-x-vala", _("Visit Valadoc"), _("The canonical source for Vala API references."));
-            welcome_view.append ("distributor-logo", _("Visit elementary.io"), _("Read up on developing for elementary"));
-            welcome_view.activated.connect ((index) => {
-                switch (index) {
-                    case 0:
-                        try {
-                            AppInfo.launch_default_for_uri ("https://valadoc.org/", null);
-                        } catch (Error e) {
-                            warning (e.message);
-                        }
-    
-                        break;
-                    case 1:
-                        try {
-                            AppInfo.launch_default_for_uri ("https://developer.elementary.io", null);
-                        } catch (Error e) {
-                            warning (e.message);
-                        }
-    
-                        break;
+            var leaflet = new Hdy.Leaflet();
+            leaflet.vexpand = true;
+            leaflet.hexpand = true;
+
+            this.dictionary = {
+                //        word n mod sep vt vi interj prep conj kama cont oth
+                new Entry("o", null, null, null, null, null, "Ah! Ha! Oh! Ooh! Aw! (emotion word)"),
+                new Entry("akesi", "Non-cute animal, reptile, amphibian, dinosaur, monster"),
+                new Entry("ala", "Nothingness, negation, zero", "No, not, none, un-", null, null, null, "No!"),
+                new Entry("ali (ale)", "Everything, anything, life, the universe", "All, every, complete, whole"),
+                new Entry("anpa", "Bottom, down, under, below, floor, beneath", "Low, lower, bottom", null, "Lower, down, defeat, overcome"),
+                new Entry("ante", "Difference", "Different", "Otherwise, or else", null, "Change, alter, modify"),
+                new Entry("anu", null, null, null, null, null, null, null, "or"),
+                new Entry("awen", null, "Remaining, stationary, permanent, sedentary", null, "Keep", "Stay, wait, remain"),
+                new Entry("e", null, null, "(Introduces a direct object)"),
+                new Entry("en", null, null, null, null, null, null, null, "And (used to coordinate head nouns)")
+            };
+
+            var lbox = new Gtk.StackSidebar();
+            lbox.width_request = 200;
+            this.stack = new Gtk.Stack();
+            this.stack.width_request = 500;
+            this.stack.transition_type = Gtk.StackTransitionType.SLIDE_UP_DOWN;
+
+            this.stack.notify.connect((s, p) => {
+                if (p.name == "visible-child") {
+                    leaflet.set_visible_child(this.stack);
+                }
+            });
+            leaflet.notify.connect((s, p) => {
+                if (leaflet.folded) {
+                    leaflet.get_style_context().add_class("folded");
+                    this.stack.transition_type = Gtk.StackTransitionType.NONE;
+                } else {
+                    leaflet.get_style_context().remove_class("folded");
+                    this.stack.transition_type = Gtk.StackTransitionType.SLIDE_UP_DOWN;
                 }
             });
 
-            this.add (welcome_view);
+            leaflet.set_visible_child(this.stack);
+            leaflet.child_transition_type = Hdy.LeafletChildTransitionType.OVER;
+            leaflet.mode_transition_type = Hdy.LeafletModeTransitionType.SLIDE;
+            
+            lbox.stack = this.stack;
+
+            for (int i = 0; i < this.dictionary.length; i++) {
+                var entry = this.dictionary[i];
+
+                var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+                box.margin_left = 20;
+                box.margin_top = 20;
+                box.margin_right = 20;
+                box.margin_bottom = 20;
+
+                var wordbox = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
+                var defbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+                defbox.width_request = 100;
+
+                var btn = new Gtk.Button.from_icon_name("go-previous-symbolic");
+                btn.get_style_context().add_class("circular");
+                btn.width_request = 36;
+                btn.height_request = 36;
+                wordbox.add(btn);
+                var word = new Gtk.Label(entry.word);
+                word.get_style_context().add_class("h1");
+                word.xalign = 0;
+
+                wordbox.add(word);
+                btn.clicked.connect(() => {
+                    leaflet.set_visible_child(lbox);
+                });
+                leaflet.notify.connect((s, p) => {
+                    if (leaflet.folded) {
+                        btn.show();
+                        word.margin_left = 5;
+                        defbox.margin_left = 41;
+                    } else {
+                        btn.hide();
+                        defbox.margin_left = 0;
+                    }
+                });
+
+
+                box.add(wordbox);
+                box.add(defbox);
+
+                if (entry.n != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>n</i>\t" + entry.n);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.mod != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>mod</i>\t" + entry.mod);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.sep != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>sep</i>\t" + entry.sep);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.vt != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>vt</i>\t" + entry.vt);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.vi != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>vi</i>\t" + entry.vi);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.interj != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>interj</i>\t" + entry.interj);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.prep != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>prep</i>\t" + entry.prep);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.conj != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>conj</i>\t" + entry.conj);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.kama != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>kama</i>\t" + entry.kama);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.cont != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>cont</i>\t" + entry.cont);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+                if (entry.oth != null) {
+                    var item = new Gtk.Label(null);
+                    item.set_markup("<i>oth</i>\t" + entry.oth);
+                    item.xalign = 0;
+                    item.get_style_context().add_class("h2");
+                    defbox.add(item);
+                }
+
+                this.stack.add_titled(box, dictionary[i].word, dictionary[i].word);
+            }
+
+            leaflet.add(lbox);
+            leaflet.add(this.stack);
+            
+            this.add(leaflet);
         }
     }
 }

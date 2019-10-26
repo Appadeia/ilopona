@@ -53,10 +53,9 @@ namespace IloPona {
             Object (
                 application: app,
                 icon_name: Constants.APP_ICON,
-                resizable: true
+                resizable: true,
+                width_request: 200
             );
-
-            
 
             var settings = IloPona.Configs.Settings.get_instance ();
             int x = settings.window_x;
