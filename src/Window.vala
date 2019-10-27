@@ -57,9 +57,9 @@ namespace IloPona {
                 width_request: 200
             );
 
-            var settings = IloPona.Configs.Settings.get_instance ();
-            int x = settings.window_x;
-            int y = settings.window_y;
+            var settings = new Settings("com.github.Appadeia.ilopona");
+            int x = settings.get_int("window_x");
+            int y = settings.get_int("window_y");
 
             if (x != -1 && y != -1) {
                 move (x, y);
@@ -79,8 +79,8 @@ namespace IloPona {
                 int root_x, root_y;
                 get_position (out root_x, out root_y);
 
-                settings.window_x = root_x;
-                settings.window_y = root_y;
+                settings.set_int("window_x", root_x);
+                settings.set_int("window_y", root_y);
                 return false;
             });
         }
