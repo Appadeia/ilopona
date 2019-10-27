@@ -59,16 +59,21 @@ namespace IloPona {
                 dialog.set_destroy_with_parent (true);
                 dialog.set_modal (true);
 
-                dialog.artists = {"Carson Black"};
+                dialog.artists = {"Carson Black", "Avalon Woodard"};
                 dialog.authors = {"Carson Black"};
                 dialog.documenters = null; // Real inventors don't document.
                 dialog.translator_credits = null; // We only need a scottish version.
 
                 dialog.program_name = "Ilo Pona";
                 dialog.comments = "A dictionary for the language of good";
-                dialog.copyright = "Public Domain";
+                dialog.copyright = "Part Public Domain, Part CC BY-NC-SA 4.0";
 
                 dialog.license = """
+The writing in the background of the word definitions is licensed under CC BY-NC-SA 4.0.
+The rest of the program's source code uses the following license.
+
+The compiled binary is CC BY-NC-SA 4.0.
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -109,9 +114,18 @@ For more information, please refer to <http://unlicense.org/>
             quit_action.activate.connect (() => {
                 controller.quit ();
             });
+            var keyboard = new SimpleAction("shortcuts", null);
+            keyboard.activate.connect(() => {
+                var build = new Gtk.Builder();
+                build.add_from_resource("/layouts/shortcuts.xml");
+                var shortcuts_window = build.get_object("help_overlay") as Gtk.ShortcutsWindow;
+                shortcuts_window.show_all();
+                shortcuts_window.present();
+            });
 
             add_action (about_action);
             add_action (quit_action);
+            add_action (keyboard);
             add_accelerator ("<Control>q", "app.quit", null);
         }
 

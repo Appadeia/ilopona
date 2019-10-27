@@ -75,6 +75,7 @@ namespace IloPona.Controllers {
             hamberder.use_popover = true;
             hamberder.image = himage;
             hamberder.menu_model = menu;
+            menu.append("Keyboard Shortcuts", "app.shortcuts");
             menu.append("About Ilo Pona", "app.about");
 
             this.btn = new Gtk.Button.from_icon_name("go-previous-symbolic");
@@ -148,6 +149,26 @@ namespace IloPona.Controllers {
             this.window.set_default_size (800, 640);
             this.window.set_titlebar (this.tb);
             this.application.add_window (window);
+
+            var find = new SimpleAction("find", null);
+            application.add_action(find);
+            find.activate.connect(() => {
+                this.search.active = !this.search.active;
+                if (this.search.active) {
+                    this.app_view.leaflet.visible_child = this.app_view.sidebarcontainer;
+                    this.app_view.searchbar.grab_focus();
+                }
+            });
+
+            var back = new Gtk.GestureSwipe(this.window);
+            back.set_propagation_phase(Gtk.PropagationPhase.CAPTURE);
+            back.swipe.connect((x, y) => {
+                if (back.n_points == 2 && x < 0) {
+                    this.app_view.leaflet.visible_child = this.app_view.sidebarcontainer;
+                }
+            });
+
+            application.add_accelerator("<Control>f", "app.find", null);
 
             Gtk.Settings.get_default ().set ("gtk-application-prefer-dark-theme", true);
         }
