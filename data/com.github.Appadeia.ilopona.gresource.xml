@@ -6,12 +6,7 @@
     </gresource>
 
     <gresource prefix="/com/github/Appadeia/ilopona/images">
+        <file alias="ilo pona sitelen.svg" compressed="true" preprocess="xml-stripblanks">images/ilo pona sitelen.svg</file>
         <file alias="com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/com.github.Appadeia.ilopona.svg</file>
-        <file alias="16-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/16/com.github.Appadeia.ilopona.svg</file>
-        <file alias="24-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/24/com.github.Appadeia.ilopona.svg</file>
-        <file alias="32-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/32/com.github.Appadeia.ilopona.svg</file>
-        <file alias="48-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/48/com.github.Appadeia.ilopona.svg</file>
-        <file alias="64-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/64/com.github.Appadeia.ilopona.svg</file>
-        <file alias="128-com.github.Appadeia.ilopona.svg" compressed="true" preprocess="xml-stripblanks">images/icons/128/com.github.Appadeia.ilopona.svg</file>
     </gresource>
 </gresources>

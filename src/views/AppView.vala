@@ -31,6 +31,7 @@ using IloPona.Configs;
 using IloPona.Widgets;
 
 using Hdy;
+using Gdk;
 
 namespace IloPona.Views {
 
@@ -84,12 +85,22 @@ namespace IloPona.Views {
 
         public Gtk.Stack stack;
         public Entry[] dictionary;
+        public Hdy.Leaflet leaflet;
+        public Gtk.StackSidebar sidebar;
+        public Gtk.Box sidebarcontainer;
+        public Gtk.Window window;
+        public Hdy.SearchBar searchbar;
 
         public void filter(string query) {
+            this.leaflet.set_visible_child(this.sidebarcontainer);
             for(int i = 0; i < this.stack.get_children().length(); i++) {
+                print(this.dictionary[i].word);
+                print("\t" + query + "\n");
                 if(this.dictionary[i].word.contains(query)) {
+                    print("\t contains the query\n");
                     this.stack.get_children().nth_data(i).show();
                 } else {
+                    print("\t does not contain the query\n");
                     this.stack.get_children().nth_data(i).hide();
                 }
             }
@@ -98,9 +109,9 @@ namespace IloPona.Views {
          * Constructs a new {@code AppView} object.
          */
         public AppView () {
-            var leaflet = new Hdy.Leaflet();
-            leaflet.vexpand = true;
-            leaflet.hexpand = true;
+            this.leaflet = new Hdy.Leaflet();
+            this.leaflet.vexpand = true;
+            this.leaflet.hexpand = true;
 
             this.dictionary = {
                 //        word n mod sep vt vi interj prep conj kama cont oth
@@ -113,11 +124,32 @@ namespace IloPona.Views {
                 new Entry("anu", null, null, null, null, null, null, null, "or"),
                 new Entry("awen", null, "Remaining, stationary, permanent, sedentary", null, "Keep", "Stay, wait, remain"),
                 new Entry("e", null, null, "(Introduces a direct object)"),
-                new Entry("en", null, null, null, null, null, null, null, "And (used to coordinate head nouns)")
+                new Entry("en", null, null, null, null, null, null, null, "And (used to coordinate head nouns)"),
+                new Entry("ijo", "Thing, something, stuff, anything, object", "Of something", null, "Objectify"),
+                new Entry("ike", "Negativity, evil, badness", "Bad, evil, wrong, overly complex, (figuratively) unhealthy", null, "To make bad, to worsen, to have a negative effect upon", "To be bad, to suck", "Oh dear! Woe! Alas!"),
+                new Entry("ilo", "Tool, device, machine, thing used for a specific purpose"),
+                new Entry("insa", "Inside, inner world, centre, stomach", "Internal, central"),
+                new Entry("jaki", "Dirt, pollution, filth", "Dirty, gross, filthy", null, "Pollute, dirty", null, "Ew! Yuck!"),
+                new Entry("jan", "Person, people, human, being, somebody, anybody", "Personal, human, somebody's, of people", null, "Personify, humanise, personalise"),
+                new Entry("jelo", null, "Yellow, light green"),
+                new Entry("jo", "Having", null, null, "Have, contain", null, null, null, null, "Receive, get, take, obtain"),
+                new Entry("kala", "Fish, sea creature")
             };
 
-            var lbox = new Gtk.StackSidebar();
-            lbox.width_request = 200;
+            this.sidebarcontainer = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+            this.sidebarcontainer.vexpand = true;
+            this.sidebarcontainer.width_request = 200;
+            this.searchbar = new Hdy.SearchBar();
+            var searchentry = new Gtk.SearchEntry();
+            searchbar.add(searchentry);
+            searchbar.connect_entry(searchentry);
+            searchentry.search_changed.connect(() => {
+                this.filter(searchentry.text);
+            });
+
+            this.sidebar = new Gtk.StackSidebar();
+            this.sidebar.width_request = 200;
+            this.sidebar.vexpand = true;
             this.stack = new Gtk.Stack();
             this.stack.width_request = 500;
             this.stack.transition_type = Gtk.StackTransitionType.SLIDE_UP_DOWN;
@@ -127,9 +159,9 @@ namespace IloPona.Views {
                     leaflet.set_visible_child(this.stack);
                 }
             });
-            leaflet.notify.connect((s, p) => {
-                if (leaflet.folded) {
-                    leaflet.get_style_context().add_class("folded");
+            this.leaflet.notify.connect((s, p) => {
+                if (this.leaflet.folded) {
+                    this.leaflet.get_style_context().add_class("folded");
                     this.stack.transition_type = Gtk.StackTransitionType.NONE;
                 } else {
                     leaflet.get_style_context().remove_class("folded");
@@ -137,11 +169,11 @@ namespace IloPona.Views {
                 }
             });
 
-            leaflet.set_visible_child(this.stack);
-            leaflet.child_transition_type = Hdy.LeafletChildTransitionType.OVER;
-            leaflet.mode_transition_type = Hdy.LeafletModeTransitionType.SLIDE;
+            this.leaflet.set_visible_child(this.stack);
+            this.leaflet.child_transition_type = Hdy.LeafletChildTransitionType.OVER;
+            this.leaflet.mode_transition_type = Hdy.LeafletModeTransitionType.SLIDE;
             
-            lbox.stack = this.stack;
+            this.sidebar.stack = this.stack;
 
             for (int i = 0; i < this.dictionary.length; i++) {
                 var entry = this.dictionary[i];
@@ -156,30 +188,11 @@ namespace IloPona.Views {
                 var defbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
                 defbox.width_request = 100;
 
-                var btn = new Gtk.Button.from_icon_name("go-previous-symbolic");
-                btn.get_style_context().add_class("circular");
-                btn.width_request = 36;
-                btn.height_request = 36;
-                wordbox.add(btn);
                 var word = new Gtk.Label(entry.word);
                 word.get_style_context().add_class("h1");
                 word.xalign = 0;
 
                 wordbox.add(word);
-                btn.clicked.connect(() => {
-                    leaflet.set_visible_child(lbox);
-                });
-                leaflet.notify.connect((s, p) => {
-                    if (leaflet.folded) {
-                        btn.show();
-                        word.margin_left = 5;
-                        defbox.margin_left = 41;
-                    } else {
-                        btn.hide();
-                        defbox.margin_left = 0;
-                    }
-                });
-
 
                 box.add(wordbox);
                 box.add(defbox);
@@ -265,10 +278,12 @@ namespace IloPona.Views {
                 this.stack.add_titled(box, dictionary[i].word, dictionary[i].word);
             }
 
-            leaflet.add(lbox);
-            leaflet.add(this.stack);
+            this.sidebarcontainer.add(this.searchbar);
+            this.sidebarcontainer.add(this.sidebar);
+            this.leaflet.add(this.sidebarcontainer);
+            this.leaflet.add(this.stack);
             
-            this.add(leaflet);
+            this.add(this.leaflet);
         }
     }
 }

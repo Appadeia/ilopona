@@ -35,15 +35,19 @@
 .titlebar {
     color: white;
     border: 0;
-    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
 }
 .titlebar .title {
     color: white;
     text-shadow: 2px 2px 9px #000000;
 }
+.pongo {
+    border: 0;
+    box-shadow: 0 7px 8px -4px rgba(0,0,0,.2), 0 12px 17px 2px rgba(0,0,0,.14), 0 5px 22px 4px rgba(0,0,0,.12);
+}
 list row {
-	font-size: 20pt;
-	padding: 20px;
+	font-size: 14pt;
+	padding: 10px;
 }
 hdyleaflet stack {
     box-shadow: none;
@@ -52,9 +56,28 @@ hdyleaflet.folded stack {
     box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
 }
 .h1 {
-    font-size: 32px;
+    font-size: 100px;
+    font-weight: 300;
 }
 .h2 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
+}
+window {
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-image: url("resource://com/github/Appadeia/ilopona/images/ilo pona sitelen.svg");
+}
+hdyleaflet:not(.folded) stacksidebar.sidebar {
+    border-right: 5px solid rgba(47,47,47,0.5);
+}
+stacksidebar.sidebar {
+	background-color: rgba(57,57,57,0.5);
+}
+stacksidebar.sidebar list {
+	background-color: transparent;
+}
+stacksidebar.sidebar list row:hover {
+	background-color: rgba(67,67,67, 0.5);
 }

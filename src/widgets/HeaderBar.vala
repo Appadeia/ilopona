@@ -28,7 +28,7 @@
 */
 
 using IloPona.Configs;
-using Hdy;
+using IloPona.Views;
 
 namespace IloPona.Widgets {
 
@@ -38,11 +38,9 @@ namespace IloPona.Widgets {
      * @see Gtk.HeaderBar
      * @since 1.0.0
      */
-    public class HeaderBar : Hdy.TitleBar {
+    public class HeaderBar : Gtk.Bin {
 
         public signal void search_changed ();
-        public Gtk.SearchEntry search { get; private set; }
-
         /**
          * Constructs a new {@code HeaderBar} object.
          *
@@ -50,18 +48,6 @@ namespace IloPona.Widgets {
          * @see icon_settings
          */
         public HeaderBar () {
-            var hb = new Gtk.HeaderBar();
-            
-            search = new Gtk.SearchEntry();
-            search.search_changed.connect(() => {
-                this.search_changed();
-            });
-
-            hb.set_title ("Ilo Pona");
-            hb.show_close_button = true;
-            hb.pack_start (search);
-
-            this.add(hb);
         }
     }
 }
