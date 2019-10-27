@@ -113,6 +113,7 @@ namespace IloPona.Controllers {
             this.leaflet.mode_transition_type = Hdy.LeafletModeTransitionType.SLIDE;
             hgroup.add_header_bar(this.lhb);
             hgroup.add_header_bar(this.rhb);
+            rhb.hexpand = true;
 
 
             this.lsize = new Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL);

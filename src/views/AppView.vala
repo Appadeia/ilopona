@@ -151,8 +151,9 @@ namespace IloPona.Views {
             this.sidebar.width_request = 200;
             this.sidebar.vexpand = true;
             this.stack = new Gtk.Stack();
-            this.stack.width_request = 500;
+            this.stack.width_request = 200;
             this.stack.transition_type = Gtk.StackTransitionType.SLIDE_UP_DOWN;
+            this.stack.hexpand = true;
 
             this.stack.notify.connect((s, p) => {
                 if (p.name == "visible-child") {
@@ -202,6 +203,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>n</i>\t" + entry.n);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.mod != null) {
@@ -209,6 +212,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>mod</i>\t" + entry.mod);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.sep != null) {
@@ -216,6 +221,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>sep</i>\t" + entry.sep);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.vt != null) {
@@ -223,6 +230,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>vt</i>\t" + entry.vt);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.vi != null) {
@@ -230,6 +239,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>vi</i>\t" + entry.vi);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.interj != null) {
@@ -237,6 +248,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>interj</i>\t" + entry.interj);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.prep != null) {
@@ -244,6 +257,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>prep</i>\t" + entry.prep);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.conj != null) {
@@ -251,6 +266,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>conj</i>\t" + entry.conj);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.kama != null) {
@@ -258,6 +275,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>kama</i>\t" + entry.kama);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.cont != null) {
@@ -265,6 +284,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>cont</i>\t" + entry.cont);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
                 if (entry.oth != null) {
@@ -272,6 +293,8 @@ namespace IloPona.Views {
                     item.set_markup("<i>oth</i>\t" + entry.oth);
                     item.xalign = 0;
                     item.get_style_context().add_class("h2");
+                    item.wrap = true;
+                    item.max_width_chars = 40;
                     defbox.add(item);
                 }
 

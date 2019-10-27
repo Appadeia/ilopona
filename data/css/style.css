@@ -63,11 +63,14 @@ hdyleaflet.folded stack {
     font-size: 24px;
     font-weight: 400;
 }
-window {
+hdyleaflet stacksidebar scrolledwindow {
     background-size: auto 90%;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://com/github/Appadeia/ilopona/images/ilo pona sitelen.svg");
+}
+stacksidebar row {
+    background-color: transparent;
 }
 hdyleaflet:not(.folded) stacksidebar.sidebar {
     border-right: 5px solid rgba(47,47,47,0.5);
