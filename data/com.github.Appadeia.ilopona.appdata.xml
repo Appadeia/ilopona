@@ -12,11 +12,20 @@
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>{{ screenshot-url }}</image>
+            <image>https://github.com/Appadeia/ilopona/raw/master/data/images/Ilo%20Pona%20Non%20Collapsed.png</image>
+        </screenshot>
+        <screenshot type="default">
+          <image>https://github.com/Appadeia/ilopona/raw/master/data/images/Ilo%20Pona%20Collapsed%20Home.png</image>
+        </screenshot>
+        <screenshot type="default">
+          <image>https://github.com/Appadeia/ilopona/raw/master/data/images/Ilo%20Pona%20Collapsed%20Definition.png</image>
         </screenshot>
     </screenshots>
     <description>
-        <p></p>
+        <p>
+          Ilo Pona is the app for the language of good.
+          It provides a dictionary for Toki Pona.
+        </p>
     </description>  
     <releases>
       <release version="1.0.0" date="2018-06-04">
