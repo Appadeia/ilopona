@@ -81,6 +81,7 @@
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/nimi.svg</file>
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/noka.svg</file>
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/o.svg</file>
+        <file compressed="true" preprocess="xml-stripblanks">images/sitelen/oko.svg</file>
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/olin.svg</file>
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/ona.svg</file>
         <file compressed="true" preprocess="xml-stripblanks">images/sitelen/open.svg</file>

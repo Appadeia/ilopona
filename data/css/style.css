@@ -63,7 +63,7 @@ hdyleaflet.folded stack {
     font-size: 24px;
     font-weight: 400;
 }
-hdyleaflet stacksidebar scrolledwindow {
+/* hdyleaflet stacksidebar scrolledwindow {
     background-size: auto 90%;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -83,829 +83,829 @@ stacksidebar.sidebar list {
 }
 stacksidebar.sidebar list row:hover {
 	background-color: rgba(67,67,67, 0.5);
-}
+} */
 
 .a {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/a.svg");
 }
 
 .akesi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/akesi.svg");
 }
 
 .ala {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ala.svg");
 }
 
 .ali {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ale.svg");
 }
 
 .anpa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/anpa.svg");
 }
 
 .ante {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ante.svg");
 }
 
 .anu {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/anu.svg");
 }
 
 .awen {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/awen.svg");
 }
 
 .e {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/e.svg");
 }
 
 .en {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/en.svg");
 }
 
 .ijo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ijo.svg");
 }
 
 .ike {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ike.svg");
 }
 
 .ilo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ilo.svg");
 }
 
 .insa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/insa.svg");
 }
 
 .jaki {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/jaki.svg");
 }
 
 .jan {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/jan.svg");
 }
 
 .jelo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/jelo.svg");
 }
 
 .jo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/jo.svg");
 }
 
 .kala {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kala.svg");
 }
 
 .kalama {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kalama.svg");
 }
 
 .kama {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kama.svg");
 }
 
 .kasi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kasi.svg");
 }
 
 .ken {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ken.svg");
 }
 
 .kepeken {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kepeken.svg");
 }
 
 .kili {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kili.svg");
 }
 
 .kin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kin.svg");
 }
 
 .kiwen {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kiwen.svg");
 }
 
 .ko {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ko.svg");
 }
 
 .kon {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kon.svg");
 }
 
 .kule {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kule.svg");
 }
 
 .kulupu {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kulupu.svg");
 }
 
 .kute {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/kute.svg");
 }
 
 .la {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/la.svg");
 }
 
 .lape {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lape.svg");
 }
 
 .laso {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/laso.svg");
 }
 
 .lawa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lawa.svg");
 }
 
 .len {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/len.svg");
 }
 
 .lete {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lete.svg");
 }
 
 .li {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/li.svg");
 }
 
 .lili {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lili.svg");
 }
 
 .linja {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/linja.svg");
 }
 
 .lipu {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lipu.svg");
 }
 
 .loje {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/loje.svg");
 }
 
 .lon {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lon.svg");
 }
 
 .luka {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/luka.svg");
 }
 
 .lukin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lukin.svg");
 }
 
 .lupa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/lupa.svg");
 }
 
 .ma {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ma.svg");
 }
 
 .mama {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mama.svg");
 }
 
 .mani {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mani.svg");
 }
 
 .meli {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/meli.svg");
 }
 
 .mi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mi.svg");
 }
 
 .mije {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mije.svg");
 }
 
 .moku {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/moku.svg");
 }
 
 .moli {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/moli.svg");
 }
 
 .monsi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/monsi.svg");
 }
 
 .mu {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mu.svg");
 }
 
 .mun {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mun.svg");
 }
 
 .musi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/musi.svg");
 }
 
 .mute {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/mute.svg");
 }
 
 .nanpa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/nanpa.svg");
 }
 
 .nasa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/nasa.svg");
 }
 
 .nasin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/nasin.svg");
 }
 
 .nena {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/nena.svg");
 }
 
 .ni {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ni.svg");
 }
 
 .nimi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/nimi.svg");
 }
 
 .noka {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/noka.svg");
 }
 
 .o {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/o.svg");
 }
 
 .oko {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/oko.svg");
 }
 
 .olin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/olin.svg");
 }
 
 .ona {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/ona.svg");
 }
 
 .open {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/open.svg");
 }
 
 .pakala {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pakala.svg");
 }
 
 .pali {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pali.svg");
 }
 
 .palisa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/palisa.svg");
 }
 
 .pana {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pana.svg");
 }
 
 .pi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pi.svg");
 }
 
 .pilin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pilin.svg");
 }
 
 .pimeja {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pimeja.svg");
 }
 
 .pini {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pini.svg");
 }
 
 .pipi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pipi.svg");
 }
 
 .poka {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/poka.svg");
 }
 
 .poki {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/poki.svg");
 }
 
 .pona {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/pona.svg");
 }
 
 .sama {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sama.svg");
 }
 
 .seli {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/seli.svg");
 }
 
 .selo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/selo.svg");
 }
 
 .seme {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/seme.svg");
 }
 
 .sewi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sewi.svg");
 }
 
 .sijelo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sijelo.svg");
 }
 
 .sike {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sike.svg");
 }
 
 .sin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sin.svg");
 }
 
 .sina {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sina.svg");
 }
 
 .sinpin {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sinpin.svg");
 }
 
 .sitelen {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sitelen.svg");
 }
 
 .sona {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/sona.svg");
 }
 
 .soweli {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/soweli.svg");
 }
 
 .suli {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/suli.svg");
 }
 
 .suno {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/suno.svg");
 }
 
 .supa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/supa.svg");
 }
 
 .suwi {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/suwi.svg");
 }
 
 .tan {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/tan.svg");
 }
 
 .taso {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/taso.svg");
 }
 
 .tawa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/tawa.svg");
 }
 
 .telo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/telo.svg");
 }
 
 .tenpo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/tenpo.svg");
 }
 
 .toki {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/toki.svg");
 }
 
 .tomo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/tomo.svg");
 }
 
 .tu {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/tu.svg");
 }
 
 .unpa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/unpa.svg");
 }
 
 .uta {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/uta.svg");
 }
 
 .utala {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/utala.svg");
 }
 
 .walo {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/walo.svg");
 }
 
 .wan {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/wan.svg");
 }
 
 .waso {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/waso.svg");
 }
 
 .wawa {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/wawa.svg");
 }
 
 .weka {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/weka.svg");
 }
 
 .wile {
-    background-size: auto 40%;
+    background-size: 25% auto;
     background-repeat: no-repeat;
     background-position: right bottom;
     background-image: url("resource://sitelen/images/sitelen/wile.svg");

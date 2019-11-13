@@ -282,11 +282,11 @@ namespace IloPona.Views {
             for (int i = 0; i < this.dictionary.length; i++) {
                 var entry = this.dictionary[i];
 
+
+                var col = new Hdy.Column();
                 var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-                box.margin_left = 20;
-                box.margin_top = 20;
-                box.margin_right = 20;
-                box.margin_bottom = 20;
+                col.margin = 20;
+
                 box.get_style_context().add_class(entry.word);
 
                 var wordbox = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
@@ -402,7 +402,10 @@ namespace IloPona.Views {
                     defbox.add(item);
                 }
 
-                this.stack.add_titled(box, dictionary[i].word, dictionary[i].word);
+                col.add(box);
+                col.maximum_width = 600;
+                col.linear_growth_width = 500;
+                this.stack.add_titled(col, dictionary[i].word, dictionary[i].word);
             }
 
             this.sidebarcontainer.add(this.searchbar);

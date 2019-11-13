@@ -85,15 +85,20 @@ namespace IloPona.Controllers {
                 this.app_view.leaflet.set_visible_child(this.app_view.sidebarcontainer);
             });
 
+            var reveal = new Gtk.Revealer();
+            reveal.add(btn);
+            reveal.valign = Gtk.Align.CENTER;
+            reveal.transition_type = Gtk.RevealerTransitionType.CROSSFADE;
+
             var hgroup = new Hdy.HeaderGroup();
             
             this.lhb = new Gtk.HeaderBar();
             this.rhb = new Gtk.HeaderBar();
-            this.rhb.pack_start(btn);
+            this.rhb.pack_start(reveal);
 
-            this.lhb.set_title("Ilo Pona");
+            this.lhb.set_title("Words");
             this.lhb.pack_end(hamberder);
-            this.lhb.pack_end(this.search);
+            this.lhb.pack_start(this.search);
             this.lhb.expand = true;
 
             var sep = new Gtk.Separator(Gtk.Orientation.VERTICAL);
@@ -127,8 +132,8 @@ namespace IloPona.Controllers {
 
             this.app_view.leaflet.bind_property(
                 "folded", 
-                this.btn,
-                "visible",
+                reveal,
+                "reveal-child",
                 BindingFlags.DEFAULT
             );
             this.search.bind_property(
@@ -148,6 +153,7 @@ namespace IloPona.Controllers {
             this.window.add (this.app_view);
             this.window.set_default_size (800, 640);
             this.window.set_titlebar (this.tb);
+
             this.application.add_window (window);
 
             var find = new SimpleAction("find", null);
